@@ -3,7 +3,7 @@ concurrency: marp-to-pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
     types:
       - opened
