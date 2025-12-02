@@ -24,6 +24,10 @@ style: |
 
 # Yuan 的 HTTP Echo Server
 
+* Demo: [https://echo.yuaner.tw/ ...](https://echo.yuaner.tw/assets/text/dict/textpar.html?ref=tablericons&utm_source=tablericons-mainsite&utm_medium=partner&utm_campaign=250k-more-icons&tab=all)
+* 專案原始碼 <https://github.com/chyuaner/cloudflare-echo-server>
+
+
 
 *Yuan Chiu <chyuaner@gmail.com>*
 
@@ -33,7 +37,7 @@ style: |
 
 ![bg right:50% 100%](img/screenshot.png)
 
-**本專案是提供CDN Edge層級的http回音鸚鵡伺服器**
+**本專案是提供CDN Edge層級的http回音伺服器**
 
 你對我發出Request，我的伺服器就會把我從你這邊接到的資訊：
 
@@ -41,7 +45,7 @@ style: |
 * 帶了什麼Post Body
 * 帶了什麼Request Header
 
-一五一實的以ResponseBody方式回應給你。
+會如實的以ResponseBody方式回應給你。
 
 同時也可以當作MyIP查詢使用，會顯示在「Host」區塊。
 
@@ -107,7 +111,7 @@ style: |
 
 ---
 # RWD手機友善 與 Dark Mode配色
-<!-- _backgroundColor: black -->
+<!-- _backgroundColor: #1D2128 -->
 <!-- _color: white -->
 <div class="columns">
 <div id="left">
@@ -221,6 +225,87 @@ style: |
 * 所有資源全部Hard Code寫死內嵌，整理成JS陣列。
 * 不使用模板系統，直接靠func整理HTML字串。
     * 但自己在規劃JS Function時仍然會盡量模組化。
+---
+
+# 網址文字友善複製
+
+![](img/query-copy.png)
+
+界面乍看下是ul li項目清單，但圈選文字後，會直接複製成可直接貼上網址列的字串
+
+---
+
+# 網址文字友善複製 實做方式
+
+<div class="columns">
+<div id="left">
+
+原始結構全部都是 &lt;span&gt;
+```html
+<span class="firstchar">?</span>
+<span class="li">
+    <span class="part">
+        <span class="key">ref</span><span class="kvsplit">=</span>tablericons
+    </span>
+    <span class="split">&amp;</span>
+</span>
+<span class="li">
+    <span class="part">
+        <span class="key">utm_source</span><span class="kvsplit">=</span>tablericons-mainsite
+    </span>
+    <span class="split">&amp;</span>
+</span>
+<span class="li">
+    <span class="part">
+        <span class="key">utm_medium</span><span class="kvsplit">=</span>partner
+    </span>
+    <span class="split">&amp;</span>
+</span>            
+<span class="li">
+    <span class="part">
+        <span class="key">utm_campaign</span><span class="kvsplit">=</span>250k-more-icons
+    </span>
+    <span class="split">&amp;</span>
+</span>
+<span class="li">
+    <span class="part">
+        <span class="key">tab</span><span class="kvsplit">=</span>alls
+    </span>
+</span>
+```
+
+
+</div>
+
+<div id="right">
+
+全由CSS模擬 &lt;ul&gt;&lt;li&gt; 的效果 <br><small>0% JavaScript處理</small>
+
+```css
+.urltext {margin-left:1em;margin-bottom:-1em;}
+.urltext .li {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 0.5em;
+    border-radius: 5px;
+}
+.urltext .firstchar { padding-left:1em; }
+.urltext .firstchar,.urltext .split, .urltext .kvsplit{
+    opacity: 0;
+}
+.urltext .li {
+    display: list-item;
+    margin-left: 1em;
+    position: relative;
+    top: -2em;
+    line-height: 2em;
+}
+.urltext .key{ font-weight: bold; }
+.urltext .key::after {
+    content: ": ";
+    position: absolute;
+}
+```
 
 ---
 
@@ -235,24 +320,22 @@ style: |
 * 會銜接回 `/src/index.js` ，讓所有功能都與Cloudflare Workers模式對齊
     * Cloudflare專屬功能提供的GeoIP資料則無法使用，需要用替代方式處理GeoIP問題。因為我暫時還沒有常駐用的獨立架設需求，就暫時不處理了。
 
-
----
-
-## 順便練習Docker建置
-
 ---
 
 # 搭配 Github Actions 自動更新Docker Hub
+![bg right](img/github-actions.png)
 
 ---
 
-## 後續新專案要不要繼續用Cloudflare Worker？
-* Cloudflare也有提供
-* 大前提：Cloudflare Workers執行能力有限！！！
-    * 本次專案已經用了大量的Wordaround方法（尤其是有不少直接Hard Code寫死）
+# 後續新專案要不要用Cloudflare Worker？
+![bg right](img/cf-workers-c.png)
+* 他有提供介接DB的機能，但...
+* Cloudflare Workers執行能力有限！！！
+    * 本次專案已經用了大量的Wordaround方法，
+        尤其是有不少直接Hard Code寫死
 
 * 如果是傳統電商需求，100%一定不會考慮！！
-* fake img 復刻中
+* 小專案：Fake Images Please 復刻中
 
 ---
 
