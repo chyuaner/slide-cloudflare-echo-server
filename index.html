@@ -901,12 +901,12 @@
 <ul>
 <li>以NodeJS最原生的node:http為主
 <ul>
-<li>本次需求沒有複雜的 router、session...等等 ，也沒有多頁面需求，不使用express這類框架</li>
+<li>本次需求沒有複雜的 router、session...等等 ，也沒有多頁面需求，所以不使用express這類框架減少無謂的依賴與效能損耗</li>
 </ul>
 </li>
 <li>會銜接回 <code>/src/index.js</code> ，讓所有功能都與Cloudflare Workers模式對齊
 <ul>
-<li>Cloudflare專屬功能提供的GeoIP資料則無法使用，需要用替代方式處理GeoIP問題。因為我暫時還沒有常駐用的獨立架設需求，就暫時不處理了。</li>
+<li>但... Cloudflare專屬功能提供的GeoIP資料則無法使用，需要用替代方式處理GeoIP問題。因為我暫時還沒有常駐用的獨立架設需求，就暫時不處理了。</li>
 </ul>
 </li>
 </ul>
@@ -952,7 +952,7 @@
     gap: 1rem;
 }
 ;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="24" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
-<h1 id="%E6%90%AD%E9%85%8D-github-actions-%E8%87%AA%E5%8B%95%E6%9B%B4%E6%96%B0docker-hub">搭配 Github Actions 自動更新Docker Hub</h1>
+<h1 id="%E6%90%AD%E9%85%8D-github-actions-%E8%87%AA%E5%8B%95%E6%9B%B4%E6%96%B0%E5%88%B0-docker-hub">搭配 Github Actions 自動更新到 Docker Hub</h1>
 </section>
 </foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-paginate="true" data-theme="default" data-style="section.lead h1, section.lead h2 {
     text-align: center;
@@ -985,7 +985,7 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
 }
-;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="24" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;img/cf-workers-c.png&quot;);"></figure></div></section></foreignObject><foreignObject width="60%" height="720"><section id="24" data-marpit-fragments="5" data-paginate="true" data-theme="default" data-style="section.lead h1, section.lead h2 {
+;--marpit-advanced-background-split:38%;" data-marpit-pagination-total="24" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;img/cf-workers-c.png&quot;);"></figure></div></section></foreignObject><foreignObject width="62%" height="720"><section id="24" data-marpit-fragments="5" data-paginate="true" data-theme="default" data-style="section.lead h1, section.lead h2 {
     text-align: center;
 }
 /*img {
@@ -1005,7 +1005,7 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
 }
-;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="24" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+;--marpit-advanced-background-split:38%;" data-marpit-pagination-total="24" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h1 id="%E5%BE%8C%E7%BA%8C%E6%96%B0%E5%B0%88%E6%A1%88%E8%A6%81%E4%B8%8D%E8%A6%81%E7%94%A8cloudflare-worker">後續新專案要不要用Cloudflare Worker？</h1>
 
 <ul>
@@ -1023,7 +1023,7 @@
 <p>如果是傳統電商需求，基本上不會考慮！</p>
 </li>
 <li>
-<p>小專案：Fake Images Please 復刻中 <img class="emoji" draggable="false" alt="😛" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f61b.svg" data-marp-twemoji=""/></p>
+<p>Fake Images Please Workers形式復刻中 <img class="emoji" draggable="false" alt="😛" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f61b.svg" data-marp-twemoji=""/></p>
 </li>
 </ul>
 </section>
