@@ -62,7 +62,7 @@ style: |
 公網 → CDN快取 → Reverse Proxy(管理vhost) → Nginx → php-fpm → 我的專案
 ```
 
-### CDN層級**直接服務**架構圖
+### 🚀 本專案採用的是：CDN層級**直接服務**架構圖
 ```
 公網 → CDN直接服務
 ```
@@ -72,9 +72,9 @@ style: |
 ---
 # JSON格式作為預設Response Body輸出
 
-![bg left 105%](img/postman.png)
+![bg left](img/postman.png)
 
-基本上以 ealen/echo-server 專案為基礎，重新撰寫復刻核心功能
+基本上以 [ealen/echo-server](https://ealenn.github.io/Echo-Server/) 專案為基礎，重新撰寫復刻核心功能
 
 分為三大塊：
 * request
