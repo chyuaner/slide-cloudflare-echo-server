@@ -12,6 +12,10 @@ style: |
     /*img {
         height: 14rem;
     }*/
+    img[alt~="center"] {
+        display: block;
+        margin: 0 auto;
+    }
     .columns {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -136,12 +140,12 @@ style: |
 模擬本後端的JSON模式原始輸出，方便切換客戶端比對使用
 
 
-![h:12cm](img/raw.png)
+![h:12cm center](img/raw.png)
 
 
 ---
 # 效能考量設計
-![h:9cm](img/one-request.png)
+![h:9cm center](img/one-request.png)
 
 **網頁版不會產生額外Request載入其他資源！（如:圖片、CSS、JS等等）**
 
