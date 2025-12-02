@@ -318,26 +318,26 @@ style: |
 ### `/src/index.js` 核心主功能流程與Cloudflare Workers直接進入點
 ### `/src/server.js` 獨立執行專用 進入點
 * 以NodeJS最原生的node:http為主
-    * 本次需求沒有複雜的 router、session...等等 ，也沒有多頁面需求，不使用express這類框架
+    * 本次需求沒有複雜的 router、session...等等 ，也沒有多頁面需求，所以不使用express這類框架減少無謂的依賴與效能損耗
 * 會銜接回 `/src/index.js` ，讓所有功能都與Cloudflare Workers模式對齊
-    * Cloudflare專屬功能提供的GeoIP資料則無法使用，需要用替代方式處理GeoIP問題。因為我暫時還沒有常駐用的獨立架設需求，就暫時不處理了。
+    * 但... Cloudflare專屬功能提供的GeoIP資料則無法使用，需要用替代方式處理GeoIP問題。因為我暫時還沒有常駐用的獨立架設需求，就暫時不處理了。
 
 ---
 
-# 搭配 Github Actions 自動更新Docker Hub
+# 搭配 Github Actions 自動更新到 Docker Hub
 ![bg right](img/github-actions.png)
 
 ---
 
 # 後續新專案要不要用Cloudflare Worker？
-![bg right:40%](img/cf-workers-c.png)
+![bg right:38%](img/cf-workers-c.png)
 * 他有提供介接DB的機能，但...
 * Cloudflare Workers執行能力有限！
     * 本次專案已經用了大量的Wordaround方法，
         尤其是有不少直接Hard Code寫死
 
 * 如果是傳統電商需求，基本上不會考慮！
-* 小專案：Fake Images Please 復刻中 😛
+* Fake Images Please Workers形式復刻中 😛
 
 ---
 
