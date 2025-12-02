@@ -1,7 +1,7 @@
 ---
 marp: true
 title: Yuan 的 HTTP Echo Server
-image: img/cover.png
+image: ./img/cover.png
 theme: default
 paginate: true
 footer: 
@@ -24,7 +24,7 @@ style: |
 
 ---
 <!-- _paginate: skip -->
-<!-- ![bg right 65%](img/qrcode_url.svg) -->
+<!-- ![bg right 65%](./img/qrcode_url.svg) -->
 
 # Yuan 的 HTTP Echo Server
 ## 專案介紹 與 開發心得
@@ -41,7 +41,7 @@ style: |
 
 # 主要核心功能
 
-![bg right:50% 100%](img/screenshot.png)
+![bg right:50% 100%](./img/screenshot.png)
 
 **本專案是提供CDN Edge層級的http回音伺服器**
 
@@ -78,7 +78,7 @@ style: |
 ---
 # JSON格式作為預設Response Body輸出
 
-![bg left](img/postman.png)
+![bg left](./img/postman.png)
 
 基本上以 [ealen/echo-server](https://ealenn.github.io/Echo-Server/) 專案為基礎，重新撰寫復刻核心功能
 
@@ -92,7 +92,7 @@ style: |
 ---
 
 # ➡️ 有設計精美的網頁UI界面
-![bg right:63% 100%](img/screenshot.png)
+![bg right:63% 100%](./img/screenshot.png)
 
 ---
 
@@ -100,10 +100,10 @@ style: |
 
 網址列顏色會根據 GET, POST, PUT, DELETE改變顏色
 
-![GET](img/GET.png)
-![POST](img/POST.png)
-![PUT](img/PUT.png)
-![DELETE](img/DELETE.png)
+![GET](./img/GET.png)
+![POST](./img/POST.png)
+![PUT](./img/PUT.png)
+![DELETE](./img/DELETE.png)
 
 顏色挑選有特別與Swagger、API Doc對齊，貼近後端工程師的習慣
 
@@ -111,7 +111,7 @@ style: |
 
 # 網址文字友善複製
 
-![](img/query-copy-c.png)
+![](./img/query-copy-c.png)
 
 有特別為 **「URL Params」、「URL Query」區塊特別設計友善文字複製** 。界面乍看下是ul li項目清單，但圈選文字後，會直接複製成可直接貼上網址列的字串
 
@@ -123,7 +123,7 @@ style: |
 <div id="left">
 
 ## RWD手機友善
-![h:12cm](img/mobile.png)
+![h:12cm](./img/mobile.png)
 
 
 </div>
@@ -131,7 +131,7 @@ style: |
 <div id="right">
 
 ## Dark Mode配色
-![](img/dark-mode.png)
+![](./img/dark-mode.png)
 
 </div>
 
@@ -140,12 +140,12 @@ style: |
 模擬本後端的JSON模式原始輸出，方便切換客戶端比對使用
 
 
-![h:12cm center](img/raw.png)
+![h:12cm center](./img/raw.png)
 
 
 ---
 # 效能考量設計
-![h:9cm center](img/one-request.png)
+![h:9cm center](./img/one-request.png)
 
 **網頁版不會產生額外Request載入其他資源！（如:圖片、CSS、JS等等）**
 
@@ -156,7 +156,7 @@ style: |
 ---
 # ➡️ 附加功能
 
-![bg right 95%](img/Screenshot_20251202_074531%20(Edit).png)
+![bg right 95%](./img/Screenshot_20251202_074531%20(Edit).png)
 
 提供 URL Query 參數 來控制以下功能
 * `echo_code=200`： 控制要回傳的 HTTP Status Code
@@ -165,7 +165,7 @@ style: |
 ---
 
 # ➡️ 提供本地架設方式
-![bg right 95%](img/docker-hub.png)
+![bg right 95%](./img/docker-hub.png)
 本專案雖然是為Cloudflare量身打造的，但也有提供傳統的架設方式
 
 * Docker
@@ -235,7 +235,7 @@ style: |
 
 # 網址文字友善複製
 
-![](img/query-copy-c.png)
+![](./img/query-copy-c.png)
 
 界面乍看下是ul li項目清單，但圈選文字後，會直接複製成可直接貼上網址列的字串
 
@@ -329,12 +329,12 @@ style: |
 ---
 
 # 搭配 Github Actions 自動更新到 Docker Hub
-![bg right](img/github-actions.png)
+![bg right](./img/github-actions.png)
 
 ---
 
 # 後續新專案要不要用Cloudflare Worker？
-![bg right:38%](img/cf-workers-c.png)
+![bg right:38%](./img/cf-workers-c.png)
 * 他有提供介接DB的機能，但...
 * Cloudflare Workers執行能力有限！
     * 本次專案已經用了大量的Wordaround方法，
