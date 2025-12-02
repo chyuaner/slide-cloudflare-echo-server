@@ -151,10 +151,10 @@
 }
 ;" data-marpit-pagination-total="24">
 <h1 id="%E5%9C%A8cdn-edge%E5%B1%A4%E7%B4%9A%E7%9B%B4%E6%8E%A5%E6%8F%90%E4%BE%9B%E5%AE%8C%E6%95%B4%E6%9C%8D%E5%8B%99">在CDN Edge層級直接提供完整服務</h1>
-<h3 id="%E5%82%B3%E7%B5%B1%E5%BE%8C%E7%AB%AF%E6%9E%B6%E6%A7%8B%E5%9C%96%E4%BB%A5%E6%88%91%E7%BF%92%E6%85%A3%E7%9A%84php%E7%82%BA%E4%BE%8B">傳統後端架構圖（以我習慣的PHP為例）</h3>
+<h3 id="%E5%82%B3%E7%B5%B1%E5%BE%8C%E7%AB%AF%E6%9E%B6%E6%A7%8B%E4%BB%A5%E6%88%91%E7%BF%92%E6%85%A3%E7%9A%84php%E7%82%BA%E4%BE%8B">傳統後端架構（以我習慣的PHP為例）</h3>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code>公網 → CDN快取 → Reverse Proxy(管理vhost) → Nginx → php-fpm → 我的專案
 </code></pre>
-<h3 id="%F0%9F%9A%80-%E6%9C%AC%E5%B0%88%E6%A1%88%E6%8E%A1%E7%94%A8%E7%9A%84%E6%98%AFcdn%E5%B1%A4%E7%B4%9A%E7%9B%B4%E6%8E%A5%E6%9C%8D%E5%8B%99%E6%9E%B6%E6%A7%8B%E5%9C%96"><img class="emoji" draggable="false" alt="🚀" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f680.svg" data-marp-twemoji=""/> 本專案採用的是：CDN層級<strong>直接服務</strong>架構圖</h3>
+<h3 id="%F0%9F%9A%80-%E6%9C%AC%E5%B0%88%E6%A1%88%E6%8E%A1%E7%94%A8%E7%9A%84%E6%98%AFcdn%E5%B1%A4%E7%B4%9A%E7%9B%B4%E6%8E%A5%E6%9C%8D%E5%8B%99%E6%9E%B6%E6%A7%8B"><img class="emoji" draggable="false" alt="🚀" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f680.svg" data-marp-twemoji=""/> 本專案採用的是：CDN層級<strong>直接服務</strong>架構</h3>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code>公網 → CDN直接服務
 </code></pre>
 <p>理論上極致效能低延遲</p>
