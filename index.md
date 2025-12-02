@@ -107,7 +107,7 @@ style: |
 
 # 網址文字友善複製
 
-![](img/query-copy.png)
+![](img/query-copy-c.png)
 
 有特別為 **「URL Params」、「URL Query」區塊特別設計友善文字複製** 。界面乍看下是ul li項目清單，但圈選文字後，會直接複製成可直接貼上網址列的字串
 
@@ -231,7 +231,7 @@ style: |
 
 # 網址文字友善複製
 
-![](img/query-copy.png)
+![](img/query-copy-c.png)
 
 界面乍看下是ul li項目清單，但圈選文字後，會直接複製成可直接貼上網址列的字串
 
