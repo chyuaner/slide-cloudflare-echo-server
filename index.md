@@ -101,7 +101,7 @@ style: |
 ![PUT](img/PUT.png)
 ![DELETE](img/DELETE.png)
 
-顏色挑選有特別與Swagger、API Doc對齊
+顏色挑選有特別與Swagger、API Doc對齊，貼近後端工程師的習慣
 
 ---
 
